@@ -1,0 +1,23 @@
+# Local-only design notes
+docs/
+
+# Gradle
+gradle.properties
+build/
+.gradle/
+
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# VSCode
+.vscode/
+
+# Mac
+.DS_Store
