@@ -21,3 +21,6 @@ out/
 
 # Mac
 .DS_Store
+
+# VSCode/Eclipse Java build output
+bin/

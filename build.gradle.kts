@@ -9,7 +9,7 @@ plugins {
 
 qupathExtension {
     name = "qupath-extension-guided-tutorials"
-    group = "io.github.qupath"
+    group = "io.github.bioimageanalysiscorewehi"
     version = "0.1.0"
     description = "Step-by-step guided walkthroughs of QuPath's own tutorials, inside QuPath"
     automaticModule = "io.github.qupath.extension.tutorials"
