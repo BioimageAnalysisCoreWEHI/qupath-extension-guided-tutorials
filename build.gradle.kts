@@ -10,6 +10,8 @@ plugins {
 qupathExtension {
     name = "qupath-extension-guided-tutorials"
     group = "io.github.bioimageanalysiscorewehi"
+    // Release steps (bump before tagging, -SNAPSHOT after): see "Releasing" in README.md.
+    // CI fails a tag push if the tag doesn't match this version.
     version = "0.1.0"
     description = "Step-by-step guided walkthroughs of QuPath's own tutorials, inside QuPath"
     automaticModule = "io.github.qupath.extension.tutorials"

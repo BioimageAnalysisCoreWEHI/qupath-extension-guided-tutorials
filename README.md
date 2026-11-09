@@ -34,3 +34,18 @@ QuPath.
 - `support/`: pure node-tree walks (`FieldFinder`, `MenuFinder`) and `PositivePercent`.
 - `live/`: the QuPath glue: `StateReader` builds the snapshot, `TutorialRunner` polls twice a second,
   `Highlighter` draws outlines, `TutorialPanel` is the window. Verified by hand in QuPath.
+
+## Releasing
+
+The version is set by hand in `build.gradle.kts`. A `v*` tag starts CI, which builds the jar and
+attaches it to a GitHub release. If the tag doesn't match the version in the file, CI fails.
+
+1. Set `version = "X.Y.Z"` in `build.gradle.kts` (remove `-SNAPSHOT`), commit, and push to `main`.
+2. Tag that commit and push the tag: `git tag vX.Y.Z && git push origin vX.Y.Z`.
+   Tag from the command line instead of GitHub's "Draft a new release" page. A release created
+   there exists before CI runs, so a version mismatch leaves a release with no jar.
+3. Once the release appears with its jar, set the version to the next snapshot
+   (e.g. `X.Y+1.0-SNAPSHOT`), commit, and push, so later builds can't be mistaken for the release.
+
+Use `MAJOR.MINOR.PATCH`: bump PATCH for fixes, MINOR for new tutorials or features, and MAJOR for
+changes that break compatibility, such as requiring a newer QuPath.

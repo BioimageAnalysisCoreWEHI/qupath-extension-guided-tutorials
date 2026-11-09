@@ -35,6 +35,7 @@ jobs:
           name: qupath-extension-guided-tutorials
           path: build/libs/*-all.jar
 
+      # The version lives in build.gradle.kts; the tag must match it exactly.
       - name: Check tag matches project version
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
@@ -42,7 +43,7 @@ jobs:
           tag_version="${GITHUB_REF_NAME#v}"
           case "$jar" in
             *"-${tag_version}-all.jar") ;;
-            *) echo "Tag $GITHUB_REF_NAME does not match jar $jar - bump version in build.gradle.kts"; exit 1 ;;
+            *) echo "::error::Tag $GITHUB_REF_NAME does not match jar $jar - set version in build.gradle.kts to $tag_version"; exit 1 ;;
           esac
 
       - name: Create GitHub release
