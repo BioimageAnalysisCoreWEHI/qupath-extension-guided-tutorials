@@ -1,5 +1,6 @@
-# Local-only design notes
-docs/
+# Local-only design notes (but README images are published)
+docs/*
+!docs/images/
 
 # Gradle
 gradle.properties

@@ -7,13 +7,28 @@ result before moving on.
 - **You do every click.** The extension explains, points and checks. It never changes your image data.
 - **No AI, no account, no network requests.** "Open download page" hands the link to your browser.
 
+![The Cell detection (Ki67) tutorial at step 5 of 15: the panel on the right confirms the drawn box and asks for Positive cell detection, while numbered orange outlines lead through Analyze ▸ Cell detection ▸ Positive cell detection.](docs/images/cell-detection-tutorial_1.jpg)
+
+*Step 5 of the Cell detection tutorial: numbered outlines lead you through the menu, and the panel
+confirms each step before moving on.*
+
 ## Tutorials
 
 | Menu | Follows | Sample slide |
 |---|---|---|
 | Extensions ▸ Guided tutorials ▸ Cell detection (Ki67) | [Cell detection](https://qupath.readthedocs.io/en/stable/docs/tutorials/cell_detection.html) | [`OS-2.ndpi`](https://openslide.cs.cmu.edu/download/openslide-testdata/Hamamatsu/OS-2.ndpi) (~977 MB), or your own slide |
 
-## Build & install
+## Install
+
+Requires QuPath 0.7.
+
+1. Download `qupath-extension-guided-tutorials-<version>-all.jar` from the
+   [latest release](https://github.com/BioimageAnalysisCoreWEHI/qupath-extension-guided-tutorials/releases/latest).
+2. Drag the jar onto the QuPath window, or copy it into your extensions folder
+   (Windows: `%USERPROFILE%\QuPath\v0.7\extensions\`), deleting any older version first.
+3. Restart QuPath. The tutorials appear under **Extensions ▸ Guided tutorials**.
+
+## Build from source
 
 Requires a full JDK 25 (`javac -version` → 25.x) and QuPath 0.7.
 
@@ -22,7 +37,7 @@ $env:JAVA_HOME = "C:\Program Files\Eclipse Adoptium\jdk-25.0.4.7-hotspot"
 .\gradlew.bat test shadowJar
 ```
 
-Copy `build/libs/qupath-extension-guided-tutorials-0.1.0-all.jar` into your QuPath extensions folder
+Copy `build/libs/qupath-extension-guided-tutorials-<version>-all.jar` into your QuPath extensions folder
 (Windows: `%USERPROFILE%\QuPath\v0.7\extensions\`), deleting any older version first, then restart
 QuPath.
 
