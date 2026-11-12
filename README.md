@@ -1,11 +1,10 @@
 # qupath-extension-guided-tutorials
 
-Step-by-step walkthroughs of QuPath's own documentation tutorials, **inside QuPath**. A small panel
-tells you what to do, outlines the control to click, notices when you've done it, and checks the
-result before moving on.
+An interactive Step-by-step walkthroughs of QuPath's own documentation tutorials, **inside QuPath**. 
+A small panel will tell you what to do, highlights what to click and responds to your actions. It checks the results 
+before moving on. 
 
-- **You do every click.** The extension explains, points and checks. It never changes your image data.
-- **No AI, no account, no network requests.** "Open download page" hands the link to your browser.
+Self-contained and does not require an AI account. 
 
 ![The Cell detection (Ki67) tutorial at step 5 of 15: the panel on the right confirms the drawn box and asks for Positive cell detection, while numbered orange outlines lead through Analyze ▸ Cell detection ▸ Positive cell detection.](docs/images/cell-detection-tutorial_1.jpg)
 
